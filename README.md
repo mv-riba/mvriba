@@ -10,6 +10,7 @@ assets/js/contact.js     sends the contact form to Formspree without a page relo
 api/posts.js             Vercel function: reads https://mriba.substack.com/feed, returns JSON, cached 1 hour
 assets/fonts/            Inter and Bricolage Grotesque (SIL Open Font License, see *-OFL.txt)
 assets/img/, assets/Marija-Riba-CV.pdf
+middleware.js            serves the Bebig showcase at the root of bebig.mvriba.com
 vercel.json              clean URLs (/about instead of /about.html) and caching headers
 ```
 
@@ -41,8 +42,10 @@ Each page is a plain HTML file, so you can edit text directly. Commit to `main` 
 ## Bebig showcase (bebig.mvriba.com)
 
 `bebig/index.html` is the Bebig showcase page. It is served from this same Vercel project:
-`vercel.json` redirects `/` and any other path on the host `bebig.mvriba.com` to `/bebig`. (A rewrite of `/`
-would be cleaner, but Vercel serves the static `index.html` before rewrites, so it never applies; redirects run first.) The app itself lives at https://bebig.app; every app link points there.
+`middleware.js` (Vercel Routing Middleware) serves it at the root of the host `bebig.mvriba.com`:
+`/` shows `/bebig` without changing the address, files under `/bebig/` are served as they are, and `/bebig`
+or any other path redirects to `/`. Other hosts (mvriba.com) are not affected. (A `vercel.json` rewrite of `/`
+can't do this, because Vercel serves the static `index.html` before rewrites; middleware runs first.) The app itself lives at https://bebig.app; every app link points there.
 
 To put it live: Vercel → this project → **Settings → Domains** → add `bebig.mvriba.com`, then add the
 `CNAME` record Vercel shows (usually `cname.vercel-dns.com`) for `bebig` at the domain registrar.

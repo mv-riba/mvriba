@@ -24,29 +24,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "bebig.mvriba.com"
-        }
-      ],
-      "destination": "/bebig",
-      "permanent": false
-    },
-    {
-      "source": "/:path((?!bebig$|bebig/|_vercel/|assets/).+)",
-      "has": [
-        {
-          "type": "host",
-          "value": "bebig.mvriba.com"
-        }
-      ],
-      "destination": "/bebig",
-      "permanent": false
-    }
   ]
 }
