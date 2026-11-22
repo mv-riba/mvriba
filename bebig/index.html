@@ -435,6 +435,12 @@ body{margin:0}
 .sc .story{display:flex;flex-wrap:wrap;gap:40px;align-items:center}
 .sc .story-txt{flex:1 1 420px;display:flex;flex-direction:column;gap:14px}
 .sc .story-txt p{margin:0;font-size:1.08rem;color:var(--ink-2)}
+.sc .quote{margin:0;display:flex;flex-direction:column;gap:18px}
+.sc .quote blockquote{margin:0;font-size:1.25rem;line-height:1.5;font-weight:600;color:var(--ink);border-left:4px solid var(--accent);padding-left:18px}
+.sc .quote figcaption{display:flex;align-items:center;gap:12px}
+.sc .quote img{width:56px;height:56px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--accent-l)}
+.sc .quote figcaption > span{display:flex;flex-direction:column;line-height:1.3}
+.sc .quote figcaption .muted{font-size:14px;font-weight:600}
 .sc .name-card{flex:1 1 280px;max-width:380px;background:var(--accent-xl);border:1px solid var(--accent-l);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:6px}
 .sc .name-card .word{font-size:44px;font-weight:800;color:var(--accent-d);letter-spacing:-.02em;line-height:1}
 .sc .name-card .say{font-weight:700;color:var(--ink-2)}
@@ -508,9 +514,10 @@ body{margin:0}
 <section id="story" class="pad" style="background: var(--card); padding: 80px 0"><div class="wrap story">
 <div class="story-txt">
 <h2 class="sec-h">Born from a messy shared note</h2>
-<p>In the first weeks with our son, my husband and I tracked every feed, nap and nappy in a shared note on our phones. It got long and messy very quickly.</p>
-<p>So between naps on maternity leave, I did what a product manager does: scoped the problem, interviewed my users (the two of us) and built the app we needed. The first bug turned up at 2am, when my husband’s feed didn’t show on my phone. It was fixed in four minutes.</p>
-<p style="font-weight: 700; color: var(--ink)">— Maria, maker of Bebig</p>
+<figure class="quote">
+<blockquote>“In our first weeks with our son, my husband and I logged every feed, nap and nappy in a shared note on our phones. It got long and messy fast, so I built the app we actually needed: one tap when you’re exhausted, more detail when you’re not.”</blockquote>
+<figcaption><img src="/bebig/marija.jpg" width="56" height="56" alt="Marija Riba"><span><b>Marija</b><span class="muted">Founder of Bebig</span></span></figcaption>
+</figure>
 <a class="read-more" href="https://mriba.substack.com/p/eat-sleep-poo-repeat-why-i-built" target="_blank" rel="noopener">Read the full story: Eat, sleep, poo, repeat <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div class="name-card">
@@ -528,7 +535,7 @@ body{margin:0}
 </main>
 <footer style="border-top: 1px solid var(--line); padding: 28px 0"><div class="wrap" style="display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; font-size: 15px">
 <span style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 200px; font-weight: 800">Bebig</span>
-<a href="https://bebig.app">bebig.app</a><a href="https://mriba.substack.com/p/eat-sleep-poo-repeat-why-i-built" target="_blank" rel="noopener">The story</a><a href="https://mvriba.com/projects">More by Maria</a>
+<a href="https://bebig.app">bebig.app</a><a href="https://mriba.substack.com/p/eat-sleep-poo-repeat-why-i-built" target="_blank" rel="noopener">The story</a><a href="https://mvriba.com/projects">More by Marija</a>
 </div></footer>
 </div>
 </body>
