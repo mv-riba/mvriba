@@ -19,7 +19,7 @@ vercel.json              clean URLs (/about instead of /about.html) and caching 
 2. Framework preset: **Other**. Leave the build command and output directory empty. Click **Deploy**.
 3. **Settings → Domains** → add `mvriba.com` (and `www.mvriba.com`, set to redirect to `mvriba.com`).
    Vercel shows the DNS records to add at your domain registrar (usually an `A` record for `mvriba.com`
-   and a `CNAME` for `www`). Leave the existing `bebig` and `streaks` records as they are.
+   and a `CNAME` for `www`). Leave the existing `streaks` record as it is (for `bebig`, see below).
 4. **Analytics** tab → **Enable** Web Analytics. The tracking script is already in every page.
    It's cookie-free, so no cookie banner is needed.
 
@@ -37,3 +37,12 @@ vercel.json              clean URLs (/about instead of /about.html) and caching 
 ## Editing
 
 Each page is a plain HTML file, so you can edit text directly. Commit to `main` and Vercel redeploys automatically.
+
+## Bebig showcase (bebig.mvriba.com)
+
+`bebig/index.html` is the Bebig showcase page. It is served from this same Vercel project:
+`vercel.json` rewrites `/` on the host `bebig.mvriba.com` to `/bebig/index.html` and sends any other
+path on that host back to `/`. The app itself lives at https://bebig.app; every app link points there.
+
+To put it live: Vercel → this project → **Settings → Domains** → add `bebig.mvriba.com`, then add the
+`CNAME` record Vercel shows (usually `cname.vercel-dns.com`) for `bebig` at the domain registrar.
