@@ -41,8 +41,8 @@ Each page is a plain HTML file, so you can edit text directly. Commit to `main` 
 ## Bebig showcase (bebig.mvriba.com)
 
 `bebig/index.html` is the Bebig showcase page. It is served from this same Vercel project:
-`vercel.json` rewrites `/` on the host `bebig.mvriba.com` to `/bebig/index.html` and sends any other
-path on that host back to `/`. The app itself lives at https://bebig.app; every app link points there.
+`vercel.json` redirects `/` and any other path on the host `bebig.mvriba.com` to `/bebig`. (A rewrite of `/`
+would be cleaner, but Vercel serves the static `index.html` before rewrites, so it never applies; redirects run first.) The app itself lives at https://bebig.app; every app link points there.
 
 To put it live: Vercel → this project → **Settings → Domains** → add `bebig.mvriba.com`, then add the
 `CNAME` record Vercel shows (usually `cname.vercel-dns.com`) for `bebig` at the domain registrar.
