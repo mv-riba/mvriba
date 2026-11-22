@@ -4,14 +4,50 @@
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path((?!bebig/|_vercel/|assets/).+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "bebig.mvriba.com"
+        }
+      ],
+      "destination": "https://bebig.mvriba.com/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "bebig.mvriba.com"
+        }
+      ],
+      "destination": "/bebig/index.html"
     }
   ]
 }
