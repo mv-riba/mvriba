@@ -27,19 +27,6 @@
   ],
   "redirects": [
     {
-      "source": "/:path((?!bebig/|_vercel/|assets/).+)",
-      "has": [
-        {
-          "type": "host",
-          "value": "bebig.mvriba.com"
-        }
-      ],
-      "destination": "https://bebig.mvriba.com/",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
-    {
       "source": "/",
       "has": [
         {
@@ -47,7 +34,19 @@
           "value": "bebig.mvriba.com"
         }
       ],
-      "destination": "/bebig/index.html"
+      "destination": "/bebig",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!bebig$|bebig/|_vercel/|assets/).+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "bebig.mvriba.com"
+        }
+      ],
+      "destination": "/bebig",
+      "permanent": false
     }
   ]
 }
