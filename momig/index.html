@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Momig — gentle self-care tracking after birth</title>
+<meta name="description" content="Momig is a gentle self-care tracker for the months after birth: food, water and movement. Track only what you choose, with no calorie targets and no judgement. Not medical advice.">
+<link rel="canonical" href="https://momig.mvriba.com/">
+<meta name="theme-color" content="#FCF4F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Momig">
+<meta property="og:title" content="Momig — small habits, on the tired days too">
+<meta property="og:description" content="A gentle self-care tracker for the months after birth: food, water and movement. Track only what you choose, with no calorie targets and no judgement.">
+<meta property="og:url" content="https://momig.mvriba.com/">
+<meta property="og:image" content="https://mvriba.com/assets/img/momig-hero.jpg?v=20261127">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/momig/icon.svg">
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+:root {
+  --cream: #FCF4F5; --cream-2: #F6E6E9; --card: #FFFFFF; --ink: #3A2A30; --ink-2: #5C4850; --muted: #7D6870; --line: #F0DDE2;
+  --accent: #D97F98; --accent-d: #B4566F; --accent-dd: #8F3F55; --accent-l: #FBE4EA; --accent-xl: #FDF0F3; --blush: #E8A0B4;
+  --butter: #FFF3CF; --butter-l: #FFF8E3; --butter-m: #F2D98C; --butter-d: #9A720F;
+  --sky: #E2F0F8; --sky-m: #B9D9EC; --sky-d: #2F6D92;
+  --sage: #E5EDDE; --sage-m: #C3DABC; --sage-d: #4A6644;
+  --shadow: 0 2px 10px rgba(120, 55, 75, .07), 0 1px 2px rgba(120, 55, 75, .05);
+  --font: "Nunito", ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: clip; background: var(--cream); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -.01em; }
+p { margin: 0; }
+a { color: var(--accent-d); font-weight: 700; }
+a.plain { text-decoration: none; color: var(--ink-2); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+.muted { color: var(--muted); }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+.btn.primary { background: var(--accent-d); color: #fff; box-shadow: 0 3px 10px rgba(180, 86, 111, .28); }
+.btn.primary:hover { background: var(--accent-dd); }
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 800; padding: 5px 12px; border-radius: 999px; background: var(--accent-l); color: var(--accent-d); }
+.badge.soon { font-size: 11.5px; padding: 2px 9px; background: var(--cream-2); color: var(--muted); }
+section.pad { padding: 80px 0; }
+section.alt { background: var(--card); }
+.sec-h { font-size: clamp(1.8rem, 3.4vw, 2.4rem); line-height: 1.15; }
+.lede { font-size: 1.1rem; color: var(--ink-2); max-width: 40rem; }
+
+/* hero */
+.hero { padding-top: 40px; padding-bottom: 72px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px; position: relative; }
+.hero-txt { flex: 1 1 460px; display: flex; flex-direction: column; gap: 20px; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.08; }
+.hero-phone { flex: 1 1 340px; display: flex; justify-content: center; position: relative; }
+.hero-phone::before { content: ""; position: absolute; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, var(--butter) 0, transparent 68%); top: -60px; right: 0; z-index: -1; }
+.hero-phone::after { content: ""; position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, var(--sky) 0, transparent 68%); bottom: -60px; left: 0; z-index: -1; }
+.phone { width: 320px; border-radius: 46px; background: #2F2227; padding: 11px; box-shadow: 0 30px 60px rgba(120, 55, 75, .22); }
+.phone img { display: block; width: 100%; height: auto; border-radius: 36px; }
+
+/* features */
+.feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.feat { background: var(--cream); border: 1px solid var(--line); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.feat h3 { font-size: 19px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.feat p { color: var(--ink-2); }
+.demo { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 14px; margin-bottom: 8px; box-shadow: var(--shadow); min-height: 140px; display: flex; flex-direction: column; justify-content: center; gap: 10px; font-size: 14px; }
+.d-row { display: flex; align-items: center; gap: 10px; }
+.d-dot { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; flex: none; }
+.d-sw { width: 40px; height: 24px; border-radius: 999px; background: #E3D3D8; position: relative; flex: none; margin-left: auto; }
+.d-sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+.d-sw.on { background: var(--accent); } .d-sw.on::after { left: 19px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; padding: 5px 11px; border-radius: 999px; border: 1.5px solid var(--line); font-weight: 700; font-size: 13px; color: var(--ink-2); background: var(--card); }
+.chip b { color: var(--muted); font-weight: 700; }
+.chip.on { background: var(--accent-l); border-color: var(--accent); color: var(--accent-d); }
+.glasses { display: flex; gap: 6px; }
+.glass { width: 22px; height: 30px; border-radius: 6px 6px 8px 8px; border: 2px solid var(--sky-m); }
+.glass.full { background: var(--sky); border-color: var(--sky-d); }
+.bars { display: flex; align-items: flex-end; gap: 8px; height: 74px; }
+.bars span { flex: 1; border-radius: 6px 6px 3px 3px; background: var(--sage-m); }
+.bars span.today { background: var(--sage-d); }
+.bar-days { display: flex; gap: 8px; font-size: 11px; color: var(--muted); font-weight: 700; } .bar-days span { flex: 1; text-align: center; }
+.win { display: flex; gap: 8px; align-items: center; background: var(--accent-xl); color: var(--ink-2); border-radius: 12px; padding: 8px 10px; font-size: 13px; font-weight: 600; }
+.win svg { color: var(--accent-d); flex: none; }
+.note { background: var(--accent-xl); color: var(--ink-2); border-radius: 12px; padding: 9px 11px; font-size: 13px; line-height: 1.4; }
+.food-li { display: flex; align-items: center; gap: 8px; padding: 4px 0; } .food-li i { width: 7px; height: 7px; border-radius: 50%; background: var(--butter-m); } .food-li span:last-child { margin-left: auto; color: var(--muted); font-size: 12.5px; }
+
+/* principles */
+.principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.principles div { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.principles b { font-size: 17px; }
+.principles span { color: var(--ink-2); }
+.disclaimer { margin-top: 22px; display: flex; gap: 12px; align-items: flex-start; background: var(--butter-l); border: 1px solid var(--butter-m); border-radius: 18px; padding: 16px 18px; color: var(--ink-2); max-width: 820px; }
+.disclaimer svg { color: var(--butter-d); flex: none; margin-top: 2px; }
+
+/* pricing */
+.cmp { background: var(--card); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden; max-width: 820px; }
+.cmp-row { display: grid; grid-template-columns: 1fr 112px 132px; align-items: center; gap: 8px; padding: 12px 0 12px 18px; border-top: 1px solid var(--line); }
+.cmp-row > :nth-child(n+2) { text-align: center; justify-self: center; }
+.cmp-head { border-top: 0; align-items: end; padding-top: 0; padding-bottom: 0; }
+.cmp-head > :first-child { padding-bottom: 14px; font-weight: 700; font-size: 14px; color: var(--muted); }
+.plan { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.2; width: 100%; padding: 18px 0 14px; border-top: 3px solid transparent; }
+.plan b { font-size: 16px; } .price { font-size: 22px; font-weight: 800; } .per { font-size: 12px; color: var(--muted); font-weight: 600; }
+.col-plus { background: var(--butter-l); }
+.cmp-row .col-plus { margin: -12px 0; padding: 12px 0; width: 100%; height: calc(100% + 24px); display: grid; place-items: center; }
+.cmp-row.cmp-head .col-plus { border-top-color: var(--butter-d); margin: 0; padding: 18px 0 14px; height: auto; align-self: stretch; display: flex; justify-content: flex-end; }
+.yes { color: var(--sage-d); display: inline-grid; } .col-plus .yes { color: var(--butter-d); }
+.txt { font-weight: 800; font-size: 14px; color: var(--ink-2); }
+.cmp-feat small { display: block; color: var(--muted); font-size: 13px; }
+.fineprint { color: var(--muted); font-size: 15px; max-width: 820px; }
+.pricing { display: flex; flex-direction: column; gap: 24px; }
+.trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
+.trust div { display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); font-weight: 600; }
+.trust svg { color: var(--sage-d); flex: none; margin-top: 1px; }
+@media (min-width: 960px) {
+  .pricing { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "intro table" "fine table" "trust trust"; grid-template-rows: auto 1fr auto; column-gap: 56px; row-gap: 20px; align-items: start; }
+  .pricing-intro { grid-area: intro; padding-top: 8px; display: flex; flex-direction: column; gap: 10px; }
+  .pricing .cmp { grid-area: table; max-width: none; }
+  .pricing .fineprint { grid-area: fine; }
+  .pricing .trust { grid-area: trust; margin-top: 36px; }
+}
+
+/* sister app */
+.sister { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+.sister-txt { flex: 1 1 420px; display: flex; flex-direction: column; gap: 14px; }
+.sister-txt p { font-size: 1.08rem; color: var(--ink-2); }
+.sister-card { flex: 1 1 280px; max-width: 380px; background: var(--accent-xl); border: 1px solid var(--accent-l); border-radius: 26px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+.pair { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; }
+.pair svg { border-radius: 14px; flex: none; }
+.pair .plus { color: var(--muted); font-weight: 700; }
+.quote { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+.quote figcaption { display: flex; align-items: center; gap: 12px; }
+.quote img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 3px var(--accent-l); }
+.quote figcaption > span { display: flex; flex-direction: column; line-height: 1.3; }
+.cta-band { background: var(--accent-d); color: #fff; border-radius: 28px; padding: 36px 28px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; }
+.cta-band h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.cta-band .btn { background: #fff; color: var(--accent-d); min-height: 52px; padding: 0 26px; font-size: 17px; }
+@media (max-width: 520px) {
+  header nav { order: 3; width: 100%; gap: 16px !important; }
+  .phone { width: 290px; }
+  .cmp-row { grid-template-columns: 1fr 64px 84px; padding: 11px 0 11px 12px; gap: 6px; }
+  .price { font-size: 18px; }
+  .feats { grid-template-columns: 1fr; }
+  section.pad { padding: 56px 0; }
+}
+</style>
+</head>
+<body>
+<header class="wrap" style="padding-top: 22px; padding-bottom: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<span style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 160px"><svg width="40" height="40" role="img" aria-label="Momig logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#E8A0B4"/><g transform="translate(24 24) scale(0.78) translate(-24 -24)"><g transform="translate(-2 0)"><path d="M30 6a18 18 0 1 0 11 30A15 15 0 0 1 30 6z" fill="#FFFFFF"/><g transform="translate(30 22) scale(0.9) translate(-24 -25)"><path d="M24 31s-6.5-3.9-6.5-8.6a3.5 3.5 0 0 1 6.5-2 3.5 3.5 0 0 1 6.5 2c0 4.7-6.5 8.6-6.5 8.6z" fill="#FFFFFF"/></g></g></g></svg><span style="font-weight: 800; font-size: 22px">Momig</span></span>
+<nav aria-label="Sections" style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 15px"><a class="plain" href="#features">Features</a><a class="plain" href="#gentle">Gentle by design</a><a class="plain" href="#pricing">Free vs Plus</a></nav>
+<a class="btn primary" href="https://momig.app">Open Momig</a>
+</header>
+<main id="main">
+<section class="wrap hero">
+<div class="hero-txt">
+<span class="badge" style="align-self: flex-start">Self-care after birth · early access</span>
+<h1>Small habits, on the tired days too.</h1>
+<p style="font-size: 1.2rem; color: var(--ink-2); max-width: 34rem">Keep a gentle eye on what you eat, how much you drink and how you move in the months after birth. Track only what you switch on, with no calorie targets and no judgement.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center"><a class="btn primary" href="https://momig.app" style="min-height: 52px; font-size: 17px; padding: 0 26px">Try it at momig.app</a><span class="muted" style="font-weight: 700">Coming soon to Google Play</span></div>
+</div>
+<div class="hero-phone"><div class="phone"><img src="/momig/today.jpg" width="390" height="844" alt="Momig Today screen: food, water and movement cards, today’s food, a row of water glasses and the latest entries"></div></div>
+</section>
+
+<section id="features" class="pad alt"><div class="wrap" style="display: flex; flex-direction: column; gap: 32px">
+<h2 class="sec-h">A few taps for you, between everything else.</h2>
+<div class="feats">
+<div class="feat"><div class="demo" aria-hidden="true">
+<div class="d-row"><span class="d-dot" style="background:var(--butter);color:var(--butter-d)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a3 3 0 0 0 3 3v7M7 3v5M10 3v5M13 3v5M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span><b>Log food</b></div>
+<div class="chips"><span class="chip">Lentil soup <b>320</b></span><span class="chip on">Porridge <b>250</b></span><span class="chip">Banana <b>105</b></span><span class="chip">Latte <b>130</b></span><span class="chip">Handful of nuts <b>170</b></span></div>
+</div><h3>Food in a tap</h3><p>Your recent foods and simple quick picks come first, so a snack takes one tap. Calories are optional, and quick-pick numbers are labelled as typical estimates.</p></div>
+
+<div class="feat"><div class="demo" aria-hidden="true">
+<div class="d-row" style="justify-content:space-between"><span class="d-row"><span class="d-dot" style="background:var(--sky);color:var(--sky-d)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><span><b>Water</b><br><span class="muted">5 of 8 glasses · 1.3 L</span></span></span><span class="chip on">+ 1 glass</span></div>
+<div class="glasses"><span class="glass full"></span><span class="glass full"></span><span class="glass full"></span><span class="glass full"></span><span class="glass full"></span><span class="glass"></span><span class="glass"></span><span class="glass"></span></div>
+</div><h3>Water, one glass at a time</h3><p>Tap once per glass, right from Today. Set your own glass size and how many you’d like a day.</p></div>
+
+<div class="feat"><div class="demo" aria-hidden="true">
+<div class="chips"><span class="chip">Walk</span><span class="chip on">Pram walk</span><span class="chip">Stretching</span><span class="chip">Postnatal class</span><span class="chip">Yoga</span></div>
+<div class="chips"><span class="chip">10 min</span><span class="chip">20 min</span><span class="chip on">30 min</span><span class="chip">45 min</span></div>
+</div><h3>Movement that fits a newborn</h3><p>Walks, pram walks, stretching, postnatal classes and yoga. Every bit counts, including a walk to the shop.</p></div>
+
+<div class="feat"><div class="demo" aria-hidden="true">
+<div class="bars"><span style="height:40%"></span><span style="height:90%"></span><span style="height:4%"></span><span style="height:70%"></span><span style="height:90%"></span><span style="height:70%"></span><span class="today" style="height:60%"></span></div>
+<div class="bar-days"><span>Fr</span><span>Sa</span><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span></div>
+<div class="win"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>You got outside on 5 days this week.</div>
+</div><h3>Your week, without grades</h3><p>Simple bars for the last seven days and a few small wins. A gap just means you didn’t log. There are no streaks to break.</p></div>
+
+<div class="feat"><div class="demo" aria-hidden="true">
+<div class="d-row"><span><b>Hide numbers</b><br><span class="muted">No calories anywhere</span></span><span class="d-sw on"></span></div>
+<div><div class="food-li"><i></i><span>Lentil soup</span><span>13:05</span></div><div class="food-li"><i></i><span>Banana</span><span>11:40</span></div><div class="food-li"><i></i><span>Porridge</span><span>07:55</span></div></div>
+</div><h3>Hide the numbers</h3><p>One switch logs food without calories anywhere in the app, and the notes about your goal turn off too. Just a list of what you ate.</p></div>
+
+<div class="feat"><div class="demo" aria-hidden="true">
+<div class="d-row"><span><b>Food</b></span><span class="d-sw on"></span></div>
+<div class="d-row"><span><b>Water</b></span><span class="d-sw on"></span></div>
+<div class="d-row"><span><b>Movement</b></span><span class="d-sw"></span></div>
+</div><h3>Only what you switch on</h3><p>Food, water and movement are each optional. Switch one off and it disappears from the app, while what you logged is kept. Switch everything off and Momig still works.</p></div>
+</div>
+</div></section>
+
+<section id="gentle" class="pad"><div class="wrap" style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px"><h2 class="sec-h">Gentle by design</h2>
+<p class="lede">The months after birth are not the time for diets or pressure. Momig is built to help you look after yourself, not to judge you.</p></div>
+<div class="principles">
+<div><b>No suggested targets</b><span>Momig never tells you how much to eat. If you want a calorie goal, it’s your own number, ideally agreed with your midwife or doctor.</span></div>
+<div><b>No “bounce back”</b><span>No weight tracking, no deficits and no red or green marks on what you ate.</span></div>
+<div><b>Kind notes, only if you ask</b><span>With a goal set, you can switch on a short note on Today. It’s a nudge, never a warning, and it’s off with Hide numbers.</span></div>
+<div><b>Rest counts too</b><span>Days with nothing logged are fine. There are no streaks and nothing to catch up on.</span></div>
+</div>
+<div class="disclaimer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span><b>Momig is a personal log, not medical advice.</b> It can’t diagnose anything. For anything about your recovery, feeding or mood, talk to your midwife or doctor.</span></div>
+</div></section>
+
+<section id="pricing" class="pad alt"><div class="wrap pricing">
+<div class="pricing-intro"><h2 class="sec-h">Free to track. Plus when it’s ready.</h2>
+<p class="lede">Everyday tracking is free. Momig Plus will add extras on top, starting with walks shared with Bebig.</p></div>
+<div class="cmp" role="table" aria-label="Free and Momig Plus compared">
+<div class="cmp-row cmp-head" role="row"><span role="columnheader">Compare plans</span><span class="plan" role="columnheader"><b>Free</b><span class="price">€0</span><span class="per">forever</span></span><span class="plan col-plus" role="columnheader"><b>Plus</b><span class="price">€2.99</span><span class="per">per month</span></span></div>
+<div class="cmp-row" role="row"><span class="cmp-feat" role="cell">Food, water and movement</span><span role="cell"><span class="yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span><span class="col-plus" role="cell"><span class="yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span></div>
+<div class="cmp-row" role="row"><span class="cmp-feat" role="cell">Hide numbers and your own goals</span><span role="cell"><span class="yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span><span class="col-plus" role="cell"><span class="yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span></div>
+<div class="cmp-row" role="row"><span class="cmp-feat" role="cell">Your week and small wins</span><span role="cell"><span class="yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span><span class="col-plus" role="cell"><span class="yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span></span></div>
+<div class="cmp-row" role="row"><span class="cmp-feat" role="cell">Walks shared with Bebig<small>Needs Bebig Plus or the bundle</small></span><span role="cell"><span class="muted" aria-label="Not included">–</span></span><span class="col-plus" role="cell"><span class="txt">Soon</span></span></div>
+</div>
+<p class="fineprint">Momig Plus will be €2.99 a month or €29.90 a year (two months free). Using Bebig too? The Bebig + Momig bundle will be €3.99 a month or €39.90 a year. Subscriptions will be available in the app on Google Play.</p>
+<div class="trust">
+<div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.3 3 7.7 7 9.5 4-1.8 7-5.2 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></svg><span>Data stored in the EU, and only you can see it</span></div>
+<div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>No ads, and your data is never sold</span></div>
+<div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg><span>Delete your account and everything in it, right from the app</span></div>
+<div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12a7 7 0 1 0 2-5"/><path d="M5 4v4h4"/></svg><span>Works offline and syncs when you’re back online</span></div>
+</div>
+</div></section>
+
+<section class="pad"><div class="wrap sister">
+<div class="sister-txt">
+<h2 class="sec-h">A sister app to Bebig</h2>
+<p>Bebig keeps track of the baby. Momig is for the person doing the feeding at 3am. Same calm design, same care with data, and a separate account, so your own log stays yours.</p>
+<p>Once both apps are on your phone, you’ll be able to connect them so a walk logged in one shows up in the other.</p>
+<a href="https://bebig.mvriba.com/" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none">See Bebig <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+<div class="sister-card">
+<div class="pair"><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#F8F5FB"/><circle cx="24" cy="24" r="19" fill="#ECE7F9"/><path d="M32 27.5A9.5 9.5 0 1 1 20.5 16a7.7 7.7 0 0 0 11.5 11.5z" fill="#A99FD8"/><circle cx="30.5" cy="16" r="2.2" fill="#E9B48F"/></svg>Bebig<span class="plus">+</span><svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#E8A0B4"/><g transform="translate(24 24) scale(0.78) translate(-24 -24)"><g transform="translate(-2 0)"><path d="M30 6a18 18 0 1 0 11 30A15 15 0 0 1 30 6z" fill="#FFFFFF"/><g transform="translate(30 22) scale(0.9) translate(-24 -25)"><path d="M24 31s-6.5-3.9-6.5-8.6a3.5 3.5 0 0 1 6.5-2 3.5 3.5 0 0 1 6.5 2c0 4.7-6.5 8.6-6.5 8.6z" fill="#FFFFFF"/></g></g></g></svg>Momig</div>
+<figure class="quote"><figcaption><img src="/momig/marija.jpg" width="56" height="56" alt="Marija Riba"><span><b>Made by Marija</b><span class="muted" style="font-size: 14px; font-weight: 600">Founder of Bebig and Momig</span></span></figcaption></figure>
+</div>
+</div></section>
+
+<section style="padding: 0 0 80px"><div class="wrap">
+<div class="cta-band"><div style="display: flex; flex-direction: column; gap: 6px"><h2>Try Momig free</h2><span style="opacity: .88; font-weight: 600">Works on any phone at momig.app. Coming soon to Google Play.</span></div>
+<a class="btn" href="https://momig.app">Open Momig</a></div>
+</div></section>
+</main>
+<footer style="border-top: 1px solid var(--line); padding: 28px 0"><div class="wrap" style="display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; font-size: 15px">
+<span style="flex: 1; min-width: 200px; font-weight: 800">Momig</span>
+<a href="https://momig.app">momig.app</a><a href="https://bebig.mvriba.com/">Bebig</a><a href="https://mvriba.com/projects">Other projects</a><a href="https://momig.app/privacy/">Privacy</a><a href="https://momig.app/terms/">Terms</a>
+<p style="flex-basis: 100%; font-size: 14px; color: var(--muted)">Momig is not medical advice. © 2026 MVR Studios · Y-tunnus: 3485332-7</p>
+</div></footer>
+</body>
+</html>
