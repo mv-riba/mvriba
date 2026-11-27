@@ -10,7 +10,7 @@ assets/js/contact.js     sends the contact form to Formspree without a page relo
 api/posts.js             Vercel function: reads https://mriba.substack.com/feed, returns JSON, cached 1 hour
 assets/fonts/            Inter and Bricolage Grotesque (SIL Open Font License, see *-OFL.txt)
 assets/img/, assets/Marija-Riba-CV.pdf
-middleware.js            serves the Bebig showcase at the root of bebig.mvriba.com
+middleware.js            serves the Bebig and Momig showcases at the roots of bebig.mvriba.com and momig.mvriba.com
 vercel.json              clean URLs (/about instead of /about.html) and caching headers
 ```
 
@@ -49,3 +49,11 @@ can't do this, because Vercel serves the static `index.html` before rewrites; mi
 
 To put it live: Vercel → this project → **Settings → Domains** → add `bebig.mvriba.com`, then add the
 `CNAME` record Vercel shows (usually `cname.vercel-dns.com`) for `bebig` at the domain registrar.
+
+## Momig showcase (momig.mvriba.com)
+
+`momig/index.html` is the Momig showcase page, served the same way: `middleware.js` maps `momig.mvriba.com` to `/momig`.
+The project images (`assets/img/momig-*.jpg`) are screenshots of the real app with sample data. The app itself lives at https://momig.app.
+
+To put it live: Vercel → this project → **Settings → Domains** → add `momig.mvriba.com`, then add the `CNAME`
+record Vercel shows for `momig` at the domain registrar.

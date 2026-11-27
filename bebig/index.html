@@ -463,7 +463,27 @@ body{margin:0}
 .sc .cta-band{background:var(--accent-d);color:#fff;border-radius:28px;padding:36px 28px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
 .sc .cta-band h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800}
 .sc .cta-band .btn{background:#fff;color:var(--accent-d);text-decoration:none;min-height:52px;padding:0 26px;font-size:17px}
+/* Momig bundle upsell */
+.sc .bundle{background:linear-gradient(135deg,var(--accent-xl),#FDF0F3);border:1px solid var(--line);border-radius:28px;padding:32px;display:flex;flex-wrap:wrap;gap:32px;align-items:center}
+.sc .bundle-txt{flex:1 1 380px;display:flex;flex-direction:column;gap:14px}
+.sc .bundle-txt h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;line-height:1.15}
+.sc .bundle-txt p{margin:0;color:var(--ink-2);font-size:1.05rem}
+.sc .apps{display:flex;align-items:center;gap:10px}
+.sc .apps svg{border-radius:14px;box-shadow:var(--shadow)}
+.sc .apps .plus-sign{font-weight:800;font-size:22px;color:var(--muted)}
+.sc .ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.sc .ticks li{display:flex;gap:10px;align-items:flex-start;color:var(--ink-2);font-weight:600}
+.sc .ticks svg{color:var(--plus);flex:none;margin-top:2px}
+.sc .bundle-card{flex:0 1 320px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--plus);border-radius:22px;box-shadow:var(--shadow);padding:24px;display:flex;flex-direction:column;gap:6px;text-align:center}
+.sc .bundle-card .name{font-weight:800;font-size:16px;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.sc .bundle-card .big{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.sc .bundle-card .per{font-size:12px;color:var(--muted);font-weight:600}
+.sc .bundle-card .was{color:var(--muted);font-weight:700;font-size:14px}
+.sc .bundle-card .save{align-self:center;margin:6px 0;font-size:.8rem;font-weight:800;padding:4px 12px;border-radius:999px;background:var(--plus-l);color:var(--plus-d)}
+.sc .bundle-card .yr{font-size:14px;color:var(--ink-2);font-weight:600}
+.sc .momig-link{color:#B4566F !important}
 @media (max-width:520px){
+  .sc .bundle{padding:24px 18px}
   .sc .cmp-row{grid-template-columns:1fr 64px 84px;padding:11px 0 11px 12px;gap:6px}
   .sc .cmp-group{padding:10px 12px 6px}
   .sc .cmp-head .price{font-size:18px}
@@ -477,7 +497,7 @@ body{margin:0}
 <div class="sc">
 <header class="wrap" style="padding-top: 22px; padding-bottom: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
 <span style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 160px"><svg width="40" height="40" role="img" aria-label="Bebig logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#F8F5FB"></rect><circle cx="24" cy="24" r="19" fill="#ECE7F9"></circle><path d="M32 27.5A9.5 9.5 0 1 1 20.5 16a7.7 7.7 0 0 0 11.5 11.5z" fill="#A99FD8"></path><circle cx="30.5" cy="16" r="2.2" fill="#E9B48F"></circle></svg><span style="font-weight: 800; font-size: 22px">Bebig</span></span>
-<nav aria-label="Sections" style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 15px"><a class="plain" href="#features">Features</a><a class="plain" href="#pricing">Free vs Plus</a><a class="plain" href="#story">The story</a></nav>
+<nav aria-label="Sections" style="display: flex; flex-wrap: wrap; gap: 22px; font-size: 15px"><a class="plain" href="#features">Features</a><a class="plain" href="#pricing">Free vs Plus</a><a class="plain" href="#momig">With Momig</a><a class="plain" href="#story">The story</a></nav>
 <a class="btn primary" href="https://bebig.app" style="text-decoration: none">Open Bebig</a>
 </header>
 <main id="main">
@@ -516,7 +536,7 @@ body{margin:0}
 <div class="pricing-intro"><h2 class="sec-h">Free to track. Plus to look ahead.</h2>
 <p class="lede">Core logging is always free. One Bebig Plus plan covers your whole family, and it’s free for everyone during early access.</p></div>
 <div class="cmp" role="table" aria-label="Free and Bebig Plus compared"><div class="cmp-row cmp-head"><span class="muted" style="font-weight:700;font-size:14px">Compare plans</span><span class="plan"><b>Free</b><span class="price">€0</span><span class="per">forever</span></span><span class="plan col-plus"><b style="display:inline-flex;align-items:center;gap:4px"><span class="plus-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.2 17.5 3 8.6l4.9 3.6L12 5.5l4.1 6.7L21 8.6l-1.2 8.9z"></path><path d="M5 20.5h14"></path></svg></span>Plus</b><span class="price">€2.99</span><span class="per">per month</span></span></div><div class="cmp-group">Everyday tracking</div><div class="cmp-row"><span class="cmp-feat">Feeds, sleep, nappies, growth and timers</span><span><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">Health notices and WHO growth charts</span><span><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">Daily summaries, patterns and 7-day trends</span><span><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">Full history and data export</span><span><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">Caregivers per baby<small>People you share each baby with</small></span><span><span class="cmp-txt">1</span></span><span class="col-plus"><span class="cmp-txt">Up to 6</span></span></div><div class="cmp-group">Going deeper</div><div class="cmp-row"><span class="cmp-feat">Predictions<small>Next feed, nap and poo</small></span><span><span class="cmp-no" aria-label="Not included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h8"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">AI assistant<small>Plain-language answers from your records</small></span><span><span class="cmp-no" aria-label="Not included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h8"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">Extra trackers<small>Bath, congestion and your own</small></span><span><span class="cmp-no" aria-label="Not included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h8"></path></svg></span></span><span class="col-plus"><span class="cmp-yes" aria-label="Included"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span></span></div><div class="cmp-row"><span class="cmp-feat">Long-range trends and check-up report</span><span><span class="cmp-no" aria-label="Not included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h8"></path></svg></span></span><span class="col-plus"><span class="cmp-txt">Soon</span></span></div></div>
-<p class="fineprint">Bebig Plus is €2.99 a month or €29.90 a year (two months free). After early access, every family gets one 14-day free trial with no payment details needed. Subscriptions will be available in the Bebig app on Google Play.</p>
+<p class="fineprint">Bebig Plus is €2.99 a month or €29.90 a year (two months free). After early access, every family gets one 14-day free trial with no payment details needed. Subscriptions will be available in the Bebig app on Google Play. Or get Bebig Plus and Momig Plus together for €3.99 a month.</p>
 <div class="trust">
 <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.3 3 7.7 7 9.5 4-1.8 7-5.2 7-9.5V6z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Data stored in the EU, with access checked on every row</span></div>
 <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><circle cx="17" cy="9" r="2.5"></circle><path d="M16.5 13.5c2.6 0 4.5 1.8 4.5 4.5"></path></svg><span>Only the people you invite can see your baby</span></div>
@@ -525,7 +545,31 @@ body{margin:0}
 </div>
 </div></section>
 
-<section id="story" class="pad" style="background: var(--card); padding: 80px 0"><div class="wrap story">
+<section id="momig" class="pad" style="background: var(--card); padding: 80px 0"><div class="wrap">
+<div class="bundle">
+<div class="bundle-txt">
+<div class="apps" aria-hidden="true"><svg width="52" height="52" viewBox="0 0 48 48"><rect width="48" height="48" fill="#F8F5FB"></rect><circle cx="24" cy="24" r="19" fill="#ECE7F9"></circle><path d="M32 27.5A9.5 9.5 0 1 1 20.5 16a7.7 7.7 0 0 0 11.5 11.5z" fill="#A99FD8"></path><circle cx="30.5" cy="16" r="2.2" fill="#E9B48F"></circle></svg><span class="plus-sign">+</span><svg width="52" height="52" viewBox="0 0 48 48"><rect width="48" height="48" fill="#E8A0B4"/><g transform="translate(24 24) scale(0.78) translate(-24 -24)"><g transform="translate(-2 0)"><path d="M30 6a18 18 0 1 0 11 30A15 15 0 0 1 30 6z" fill="#FFFFFF"/><g transform="translate(30 22) scale(0.9) translate(-24 -25)"><path d="M24 31s-6.5-3.9-6.5-8.6a3.5 3.5 0 0 1 6.5-2 3.5 3.5 0 0 1 6.5 2c0 4.7-6.5 8.6-6.5 8.6z" fill="#FFFFFF"/></g></g></g></svg></div>
+<h2>Looking after yourself too? Add Momig.</h2>
+<p>Momig is Bebig’s sister app for mums: a gentle way to keep track of food, water and movement in the months after birth, tracking only what you switch on. Get Bebig Plus and Momig Plus together for one price.</p>
+<ul class="ticks">
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Bebig Plus: predictions, the AI assistant, extra trackers and up to 6 caregivers</li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Momig Plus: Ask Momig and long-range trends (coming soon)</li>
+<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Walks you log in one app count in the other (coming soon)</li>
+</ul>
+<a class="read-more momig-link" href="https://momig.mvriba.com/">Meet Momig <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="bundle-card">
+<span class="name"><span class="plus-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.2 17.5 3 8.6l4.9 3.6L12 5.5l4.1 6.7L21 8.6l-1.2 8.9z"></path><path d="M5 20.5h14"></path></svg></span>Bebig Plus + Momig Plus</span>
+<span class="big">€3.99</span>
+<span class="per">per month</span>
+<span class="was">instead of <s>€5.98</s></span>
+<span class="save">Save a third</span>
+<span class="yr">or €39.90 a year, instead of €59.80</span>
+</div>
+</div>
+</div></section>
+
+<section id="story" class="pad" style="padding: 80px 0"><div class="wrap story">
 <div class="story-txt">
 <h2 class="sec-h">Born from a messy shared note</h2>
 <figure class="quote">
@@ -549,7 +593,7 @@ body{margin:0}
 </main>
 <footer style="border-top: 1px solid var(--line); padding: 28px 0"><div class="wrap" style="display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; font-size: 15px">
 <span style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 200px; font-weight: 800">Bebig</span>
-<a href="https://bebig.app">bebig.app</a><a href="https://mriba.substack.com/p/eat-sleep-poo-repeat-why-i-built" target="_blank" rel="noopener">The story</a><a href="https://mvriba.com/projects">Other projects</a><a href="https://bebig.app/privacy/">Privacy</a><a href="https://bebig.app/terms/">Terms</a>
+<a href="https://bebig.app">bebig.app</a><a href="https://mriba.substack.com/p/eat-sleep-poo-repeat-why-i-built" target="_blank" rel="noopener">The story</a><a href="https://momig.mvriba.com/">Momig</a><a href="https://mvriba.com/projects">Other projects</a><a href="https://bebig.app/privacy/">Privacy</a><a href="https://bebig.app/terms/">Terms</a>
 <p style="flex-basis: 100%; margin: 0; font-size: 14px; color: var(--muted)">© 2026 MVR Studios · Y-tunnus: 3485332-7</p>
 </div></footer>
 </div>
