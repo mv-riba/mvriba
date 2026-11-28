@@ -66,8 +66,12 @@ a:hover { color: var(--accent-dd); }
 .hero-art { flex: 1 1 340px; display: flex; justify-content: center; }
 
 /* phone mock */
-.phone { width: 320px; border-radius: 44px; background: var(--ink); padding: 12px; box-shadow: 0 30px 60px rgba(120, 55, 75, .2); }
-.screen { border-radius: 34px; background: var(--cream); padding: 22px 14px 18px; display: flex; flex-direction: column; gap: 12px; overflow: hidden; position: relative; z-index: 0; }
+/* A fixed phone shape (about 9:19, like a real phone), so the frame doesn't shrink when the content gets shorter. */
+.phone { width: 320px; aspect-ratio: 9 / 19; display: flex; flex-direction: column; border-radius: 44px; background: var(--ink); padding: 12px; box-shadow: 0 30px 60px rgba(120, 55, 75, .2); }
+.screen { flex: 1; border-radius: 34px; background: var(--cream); padding: 22px 14px 18px; display: flex; flex-direction: column; gap: 12px; overflow: clip; position: relative; z-index: 0; }
+.screen .tabs { margin: auto -14px -18px; padding: 10px 6px 14px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); background: var(--card); }
+.screen .tabs span { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: .7rem; font-weight: 600; color: var(--muted); }
+.screen .tabs .on { color: var(--accent-d); }
 .screen .blob { position: absolute; border-radius: 50%; z-index: -1; width: 220px; height: 220px; background: radial-gradient(circle, var(--butter-l), transparent 70%); top: -70px; right: -60px; }
 .s-head { display: flex; align-items: center; gap: 12px; }
 .s-head div { flex: 1; } .s-head h3 { font-size: 1.1rem; } .s-head p { font-size: .82rem; color: var(--muted); }
@@ -238,6 +242,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: cent
 <li><span class="dot" style="background: var(--butter); color: var(--butter-d)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a3 3 0 0 0 3 3v7M7 3v5M10 3v5M13 3v5M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span><b>12:35</b><span>Cheese sandwich</span></li>
 <li><span class="dot" style="background: var(--sky); color: var(--sky-d)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><b>11:50</b><span>Glass of water</span></li>
 </ul>
+<div class="tabs"><span class="on"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1z"/></svg>Today</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20v-6M12 20V6M18 20v-10"/></svg>Week</span><span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Settings</span></div>
 </div></div>
 </div>
 </section>
