@@ -80,8 +80,8 @@ a:hover { color: var(--accent-dd); }
 .sum-move { background: var(--sage); } .sum-move svg { color: var(--sage-d); }
 .mcard { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 12px 14px; }
 .mcard h4 { margin: 0 0 6px; font-size: .95rem; }
-.glasses { display: flex; gap: 5px; flex-wrap: wrap; }
-.glass { width: 22px; height: 28px; border-radius: 3px 3px 7px 7px; border: 2px solid var(--sky-d); opacity: .35; position: relative; overflow: hidden; }
+.glasses { display: grid; grid-template-columns: repeat(8, minmax(0, 22px)); gap: 5px; }
+.glass { width: 100%; aspect-ratio: 22 / 28; border-radius: 3px 3px 7px 7px; border: 2px solid var(--sky-d); opacity: .35; position: relative; overflow: hidden; }
 .glass.full { opacity: 1; } .glass.full::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 72%; background: var(--sky); }
 .note { background: var(--sage); color: var(--sage-d); border-radius: 12px; padding: 8px 10px; font-size: .8rem; font-weight: 700; display: flex; gap: 6px; align-items: center; }
 .tl { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
